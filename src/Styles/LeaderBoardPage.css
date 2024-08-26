@@ -1,0 +1,141 @@
+/* Leaderboard.css */
+
+
+
+.leaderboard-container {
+    display: flex;
+    height: 100vh;
+    color: #333;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #F0FFF0;
+    padding: 20px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.create-goal {
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.Sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.Sorting span {
+    color: var(--black-80, rgba(28, 28, 28, 0.80));
+    font-family: "Be Vietnam Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.menu li.active {
+    color: #008000;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    color: var(--black-100, #1C1C1C);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+    /* 166.667% */
+}
+
+.start-receiving {
+    background-color: #008000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.leaderboard {
+    margin-top: 20px;
+}
+
+.search-bar {
+    display: flex;
+    width: 455px;
+    height: var(--48, 48px);
+    padding: 13px 10px 13px 13px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 55px;
+    background: #EAFAEB;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.02);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.searchbarSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+th {
+    background-color: #F0FFF0;
+    color: #008000;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

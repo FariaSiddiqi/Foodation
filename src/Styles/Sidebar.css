@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.Container {
+
+    background: #FCFFFC;
+    padding: 44px 37px 351px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 56px;
+
+}
+
+
+.GoalButton {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--8, 8px);
+    background: var(--green-mid, #389738);
+    box-shadow: 0px 7px 16.1px 0px rgba(66, 186, 133, 0.10);
+    border: none;
+    padding: 14px 16px;
+    gap: var(--8, 8px);
+}
+
+.GoalButton button {
+
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.54px;
+    cursor: pointer;
+}
+
+.GoalButton img {
+    width: 28px;
+
+
+}
+
+.sideBarListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.settingSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(28, 28, 28, 0.40);
+}
+
+.listItem p {
+    margin-bottom: 0;
+}
+
+.line {
+    border: 1px solid #DCF3DD;
+    height: 0px;
+    width: 194px
+}
+
+.active {
+    color: #389738;
+}
+
+.menuIcon img {
+    width: 10%;
+
+}
+
+.menuIcon {
+    cursor: pointer;
+    display: none;
+
+}
+
+.closeButton img {
+    width: 100%;
+    min-width: 40px;
+}
+
+.closeButton {
+
+    display: none;
+}
+
+
+@media(max-width: 768px) {
+    .Container {
+        position: fixed;
+        top: 0;
+        left: -350px;
+        width: 350px;
+        height: 100%;
+        background:#FFFFFF;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        /* backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);*/
+        transition: left 0.3s ease; 
+        z-index: 1000;
+
+    }
+
+    .Container.open {
+        left: 0;
+        /* Show sidebar when open */
+    }
+
+    /* Additional styles for sidebar items */
+    .Container.open .listItem {
+        display: flex;
+    }
+
+    .menuIcon {
+        display: block;
+        margin-left: 25px;
+        margin-top: 16px;
+    }
+
+    .listItem {
+        display: none;
+    }
+
+    .closeButton {
+        position: absolute;
+        left: 261px;
+        top: 42px;
+        display: block;
+
+    }
+
+    .GoalButton {
+        width: 80%;
+    }
+}

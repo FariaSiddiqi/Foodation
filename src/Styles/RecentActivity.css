@@ -1,0 +1,101 @@
+.RecentActivityContainer{
+    margin-top: 10%;
+}
+
+
+.RecentActivityContainer h2 {
+    color: var(--black-100, #1C1C1C);
+    font-family: "Be Vietnam Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    margin-left: 12%;
+
+}
+
+.RecentActivityContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.RecentActivityCards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.RecentActivity-card {
+    width: 298px;
+    padding: 10px;
+    border-radius: var(--8, 8px);
+    background: var(--white-100, #FFF);
+    box-shadow: 0px 1px 8px 0px rgba(186, 237, 189, 0.40);
+    /* margin-bottom: 12px; */
+}
+
+.donor-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.donor-detail-content {
+    display: flex;
+    padding-right: 7px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.donor-detail-content h3 {
+    color: var(--black-100, #1C1C1C);
+    font-family: "Be Vietnam Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.donor-detail-content p {
+    color: var(--black-40, rgba(28, 28, 28, 0.40));
+    font-family: "Be Vietnam Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+
+.view-button {
+    display: flex;
+    width: 30%;
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 6px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 7px 16.1px 0px rgba(66, 186, 133, 0.10);
+    cursor: pointer;
+}
+
+.view-button span {
+    color: var(--green-mid, #389738);
+    text-align: center;
+    font-family: "Be Vietnam Pro";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 160% */
+    letter-spacing: 0.3px;
+}

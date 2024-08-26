@@ -1,0 +1,210 @@
+.goals-container {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.goals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    gap: 10px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #6c6c6c;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.tab.active {
+    color: #34a853;
+    font-weight: bold;
+    border-bottom: 2px solid #34a853;
+}
+
+.tab-count {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.create-goal-button {
+    background-color: #34a853;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+    margin-left: auto; /* Align button to the right */
+}
+
+.goal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.goal-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.goal-details {
+    flex-grow: 1;
+    margin-left: 15px;
+    min-width: 200px; /* Ensures the details section maintains a minimum width */
+}
+
+.goal-details h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+
+.goal-details p {
+    font-size: 14px;
+    color: #8c8c8c;
+    margin: 0 0 10px 0;
+}
+
+.goal-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.progress-bar {
+    width: 133px;
+    height: 12px;
+    flex-shrink: 0;
+    border-radius: 120px;
+    opacity: 0.2;
+    background: #50C257;
+}
+
+.progress {
+    display: flex;
+    width: 105px;
+    height: 12px;
+    padding: 12px;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 120px;
+    background: linear-gradient(90deg, #389738 0%, #81B73A 100%);
+}
+
+.goal-status {
+    font-size: 14px;
+    color: #6c6c6c;
+    flex-shrink: 0;
+}
+
+.goal-reward {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #34a853;
+    flex-shrink: 0;
+}
+
+.reward-icon {
+    margin-right: 5px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .goals-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center; /* Center tabs on smaller screens */
+        width: 100%; /* Tabs take full width */
+    }
+
+    .create-goal-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .goal-item {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to start on smaller screens */
+    }
+
+    .goal-progress {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .goal-item {
+        padding: 10px;
+    }
+
+    .goal-details {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .goal-progress {
+        flex-direction: column; /* Stack progress bar and status vertically */
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .create-goal-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .goal-image img {
+        width: 80px; /* Smaller image for small screens */
+        height: 80px;
+    }
+
+    .goal-details h3 {
+        font-size: 16px;
+    }
+
+    .goal-details p {
+        font-size: 12px;
+    }
+
+    .goal-status {
+        font-size: 12px;
+    }
+
+    .goal-reward {
+        font-size: 16px;
+    }
+}
