@@ -1,0 +1,380 @@
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    /* Align with the sidebar */
+    padding: 20px;
+}
+
+.search-and-filter {
+    display: flex;
+    gap: 128px;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.user-listing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    width: 455px;
+    height: var(--48, 48px);
+    padding: 13px 10px 13px 13px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 55px;
+    background: #EAFAEB;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.02);
+    margin-bottom: 0;
+}
+
+.search-bar:focus {
+    border-color: #30b960;
+}
+
+.apply-filter-button {
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--8, 8px);
+    background: var(--green-mid, #389738);
+    box-shadow: 0px 7px 16.1px 0px rgba(66, 186, 133, 0.10);
+    border: none;
+    padding: 14px 16px;
+    gap: var(--8, 8px);
+}
+
+.apply-filter-button button {
+    background: none;
+    border: none;
+    color: white;
+
+}
+
+.apply-filter-button:hover {
+    background-color: #28a54c;
+}
+
+/* Donation Cards */
+.donation-cards {
+    display: flex;
+    flex-direction: column;
+    width: 741px;
+    padding: var(--16, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.donation-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease;
+    border-radius: var(--16, 16px);
+    background: var(--white-100, #FFF);
+    box-shadow: 0px 6.483px 21.61px 0px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+}
+
+.text-overlay {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--2, 2px);
+    color: var(--white-100, #FFF);
+    /* font-family: "Be Vietnam Pro"; */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    position: absolute;
+    right: 496px;
+    top: 108px;
+}
+
+.donation-image {
+    width: 270px;
+    height: 188px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.donation-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.donation-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.donation-location {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.donor-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 0;
+}
+
+.donor-name {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.donation-timeLocation {
+    display: flex;
+    gap: 10px;
+}
+
+.donation-time,
+.experience {
+    color: gray;
+    font-size: 12px;
+}
+
+.donation-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.accept-donation-button {
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: var(--green-mid, #389738);
+
+    /* chips */
+    box-shadow: 0px 7px 16.1px 0px rgba(42, 136, 34, 0.10);
+}
+
+.accept-donation-button:hover {
+    background-color: #28a54c;
+}
+
+.more-options-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.more-icon {
+    font-size: 18px;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.more-options-button:hover .more-icon {
+    color: #30b960;
+}
+
+/* Leaderboard */
+.leaderboard {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.leaderboard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.leaderboard ul li .name {
+    display: flex;
+    align-items: center;
+}
+
+.leaderboard ul li .name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.leaderboard ul li .score {
+    font-weight: 600;
+    color: #30b960;
+}
+
+/* Recent Activity */
+.recent-activity {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.recent-activity ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-activity ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.recent-activity ul li .name {
+    display: flex;
+    align-items: center;
+}
+
+.recent-activity ul li .name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.recent-activity ul li .time {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    .donation-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .donation-image {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .donation-info {
+        text-align: center;
+    }
+
+    .donor-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accept-donation-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .apply-filter-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-and-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .donation-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .donation-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .donation-info {
+        text-align: center;
+    }
+
+    .leaderboard,
+    .recent-activity {
+        margin-top: 20px;
+    }
+}

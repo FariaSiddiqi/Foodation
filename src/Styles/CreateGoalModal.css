@@ -1,0 +1,108 @@
+.modal-header {
+    background-color: #F0FFF0;
+    color: #008000;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+
+}
+
+.input-field {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    background-color: #F9FAFB;
+    box-shadow: none;
+    font-size: 16px;
+}
+
+.upload-box {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: var(--12, 12px);
+    border: 2px dashed #EAFAEB;
+    background: rgba(234, 250, 235, 0.49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.upload-input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #6B7280;
+    font-size: 16px;
+}
+
+.upload-placeholder span {
+    color: #389738;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+.supported-formats {
+    font-size: 14px;
+    color: rgba(28, 28, 28, 0.40);
+    margin-top: 8px;
+}
+
+form .add-more {
+    color: var(--green-mid, #389738);
+    font-family: "Be Vietnam Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    /* 150% */
+    letter-spacing: 0.42px;
+    text-decoration: none;
+}
+
+.modal-footer {
+    border-top: none;
+    padding-top: 20px;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.modal-footer .btn-primary {
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
