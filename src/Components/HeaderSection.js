@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Styles/HeaderSection.css";
 
 function HeaderSection() {
+    const [showNotifications, setShowNotifications] = useState(false);
+
+    const toggleNotifications = () => {
+        console.log('Notification icon clicked'); // Debugging line
+        setShowNotifications(!showNotifications);
+    };
+    console.log('showNotifications:', showNotifications);
+
     return (
         <Container fluid>
             <Row>
@@ -11,7 +19,7 @@ function HeaderSection() {
                         <h1>Dashboard</h1>
                         <div className="rightSideContent">
                             <button className="startReceivingBtn">Start Receiving</button>
-                            <div className="notiBar">
+                            <div className="notiBar" onClick={toggleNotifications}>
                                 <img src="/Images/notifcations.svg" alt="notifications-icon" />
                             </div>
                             <div className="profileSection">
@@ -25,6 +33,21 @@ function HeaderSection() {
                             </div>
                         </div>
                     </div>
+                    {showNotifications && (
+                        <div className="notification-popup show">
+                            <div className="notification-item">
+                                <img src="/Images/noti-icon.png" alt="food-icon" className="notification-img" />
+                                <div className="notification-content">
+                                    <p style={{ marginBottom: 0 }} >Malesuada tellus tincidunt fringilla enim, id mauris.</p>
+                                    <span className="notification-time">3 mins ago</span>
+                                </div>
+                                <div className="notification-menu">
+                                    <img src="/Images/3-dot menu.png" alt="menu-dots" />
+                                </div>
+                            </div>
+                            {/* Repeat similar notification items as needed */}
+                        </div>
+                    )}
                 </Col>
             </Row>
         </Container>

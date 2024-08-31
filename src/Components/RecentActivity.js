@@ -1,7 +1,15 @@
 import React from "react";
 import "../Styles/RecentActivity.css";
+import { useNavigate } from "react-router-dom";
+
 
 function RecentActivity() {
+  const navigate = useNavigate();
+
+  const handleViewAllClick = () => {
+    navigate("/recent-activity"); // Navigate to the RecentActivityPage
+  };
+
   return (
     <div className="RecentActivityContainer">
       <h2>Recent Activity</h2>
@@ -45,7 +53,7 @@ function RecentActivity() {
             </div>
           </div>
         </div>
-        <div className="view-button">
+        <div className="view-button" onClick={handleViewAllClick}>
           <span>View All</span>
           <img src="/Images/arrow-right.png" alt="arrow-right" />
         </div>
