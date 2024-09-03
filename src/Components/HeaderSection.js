@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Styles/HeaderSection.css";
+import CreateGoalModal from "./CreateGoalModal"; // Import the modal component
 
 function HeaderSection() {
     const [showNotifications, setShowNotifications] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    const handleShow = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
 
     const toggleNotifications = () => {
         console.log('Notification icon clicked'); // Debugging line
@@ -18,7 +23,7 @@ function HeaderSection() {
                     <div className="headerSection">
                         <h1>Dashboard</h1>
                         <div className="rightSideContent">
-                            <button className="startReceivingBtn">Start Receiving</button>
+                            <button className="startReceivingBtn" onClick={handleShow}> Start Receiving</button>
                             <div className="notiBar" onClick={toggleNotifications}>
                                 <img src="/Images/notifcations.svg" alt="notifications-icon" />
                             </div>
@@ -50,6 +55,8 @@ function HeaderSection() {
                     )}
                 </Col>
             </Row>
+            {/* Modal */}
+            <CreateGoalModal show={showModal} handleClose={handleClose} />
         </Container>
     );
 }

@@ -9,20 +9,24 @@ import LeaderBoard from "./Leaderboard";
 import GoalItem from "./GoalItem";
 import CreateGoalModal from "./CreateGoalModal"; // Import the modal component
 
-const goals = Array(12).fill({
-    goalImage: '/Images/goalBasket.png',
-    title: 'Donate a basket of fruit',
-    description: '2 apples, 4 bananas, ...',
-    progress: 100,
-    enrolled: '32/40',
-    rewardPoints: 200,
-});
-
 const GoalPage = () => {
+    const [goals, setGoals] = useState(Array(6).fill({
+        goalImage: '/Images/goalBasket.png',
+        title: 'Donate a basket of fruit',
+        description: '2 apples, 4 bananas, ...',
+        progress: 100,
+        enrolled: '32/40',
+        rewardPoints: 200,
+    }));
+
     const [showModal, setShowModal] = useState(false);
 
     const handleShow = () => setShowModal(true);
     const handleClose = () => setShowModal(false);
+
+    const addGoal = (newGoal) => {
+        setGoals([...goals, newGoal]);
+    };
 
     return (
         <Container fluid className="leaderboard-page-container">
@@ -65,7 +69,7 @@ const GoalPage = () => {
             </Row>
 
             {/* Modal */}
-            <CreateGoalModal show={showModal} handleClose={handleClose} />
+            <CreateGoalModal show={showModal} handleClose={handleClose} addGoal={addGoal} />
         </Container>
     );
 };

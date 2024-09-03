@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 import "../Styles/Sidebar.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import CreateGoalModal from "./CreateGoalModal"; // Import the modal component
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const navigate = useNavigate();
-  const location = useLocation(); // Get current path
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
   const handleViewAllClick = () => {
-    navigate("/my-donors"); // Correct path to MyDonor
+    navigate("/my-donors");
   };
 
-  // Function to dynamically set the icon source based on the active state
+  const handleShow = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   const getIconSrc = (baseName) => {
-    return location.pathname === `/${baseName}`
+    return location.pathname === `/${baseName.toLowerCase()}`
       ? `/Images/${baseName}-icon-active.svg`
       : `/Images/${baseName}-icon.svg`;
   };
@@ -34,7 +39,7 @@ function Sidebar() {
         <div>
           <img src="/Images/logo.png" alt="logo-icon" />
         </div>
-        <div className="GoalButton">
+        <div className="GoalButton" onClick={handleShow}>
           <img src="/Images/add-circle.svg" alt="CreateGoal-icon" />
           <button>Create Goal</button>
         </div>
@@ -65,7 +70,7 @@ function Sidebar() {
           <div
             className={`listItem ${location.pathname === "/goals" ? "active" : ""
               }`}
-            onClick={() => navigate("/goals")} // Corrected path here
+            onClick={() => navigate("/goals")}
           >
             <img src={getIconSrc("goal")} alt="Goal-icon" />
             <p>Goals</p>
@@ -91,6 +96,8 @@ function Sidebar() {
           </div>
         </div>
       </div>
+      {/* Modal */}
+      <CreateGoalModal show={showModal} handleClose={handleClose} />
     </div>
   );
 }
