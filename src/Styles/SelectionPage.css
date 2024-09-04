@@ -1,0 +1,149 @@
+.SelectionContainer {
+    background: url(../../public/Images/bg.png) no-repeat center center/cover;
+    min-height: 100vh;
+    /* Ensures full viewport height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Adds padding for smaller screens */
+}
+
+.selection-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    /* Ensures the content doesn't overflow */
+}
+
+img {
+    margin: 0;
+}
+
+.logo {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    gap: 29.333px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #0b7b3e;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--black-100, #1C1C1C);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: -0.32px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.button {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 25px;
+    border: 2px solid #0b7b3e;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.organization,
+.individual {
+    display: flex;
+    height: 56px;
+    padding: 7px 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    box-shadow: 0px 7px 16.1px rgba(42, 136, 34, 0.10);
+}
+
+.organization {
+    background: #389738;
+    border: none;
+    color: white;
+}
+
+.individual {
+    border: 3px solid #389738;
+    color: #389738;
+}
+
+.organization:hover,
+.individual:hover {
+    background-color: #09632e;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo {
+        width: 25%;
+        /* Increase logo size on smaller screens */
+    }
+
+    .title {
+        font-size: 2rem;
+        /* Adjust title size for tablets */
+    }
+
+    .subtitle {
+        font-size: 22px;
+        /* Adjust subtitle size for tablets */
+        line-height: 1.5;
+    }
+
+    .button-group {
+        width: 100%;
+        /* Make buttons take full width on smaller screens */
+        max-width: none;
+    }
+
+    .button {
+        font-size: 1rem;
+        /* Reduce button font size for smaller screens */
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 35%;
+        /* Increase logo size further on mobile screens */
+    }
+
+    .title {
+        font-size: 1.8rem;
+        /* Adjust title size for mobile screens */
+    }
+
+    .subtitle {
+        font-size: 18px;
+        /* Adjust subtitle size for mobile screens */
+    }
+
+    .button {
+        font-size: 0.9rem;
+        /* Further reduce button font size */
+        padding: 10px;
+        border-radius: 20px;
+        /* Reduce border radius for smaller buttons */
+    }
+}
